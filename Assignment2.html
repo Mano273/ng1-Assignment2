@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment2</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+  <script>
+    var myApp = angular.module("myModule",[]);
+    myApp.controller('myController', function($scope){
+      $scope.people=[{firstName:'',lastName:''}];
+    	});
+  </script>
+</head>
+
+<body ng-app="myModule" >
+  <div ng-controller="myController" >
+  	   <label>First name: <input type="text" ng-model="firstName" placeholder="first name"/></label><br />
+	     <label>Last name:<input type="text" ng-model="lastName" placeholder="last name" /></label>
+	     <br>
+	     <br>
+	     <p>person name is: {{firstName}} {{lastName}}</p>
+  </div>
+</body>
+</html>
